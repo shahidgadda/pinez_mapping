@@ -1,0 +1,41 @@
+{% extends "account/base.html" %}
+
+{% block body %}
+    <div class="container">
+        <div class="worksmain">
+            <div class="section group">
+
+		<form action="" method="post" enctype="multipart/form-data">
+		    {% csrf_token %}
+
+		    <div>
+				<span></span>
+			<h3>Upload Images:</h3>
+			</div>
+
+		    <div>
+				<span></span>
+				<input type="file" name="uploads" value="Upload Images" class=" " multiple>
+				<span>{{ form.uploads.errors }}</span>
+			</div>
+
+			<div>
+				<span></span>
+			<h3>Upload CSV:</h3>
+			</div>
+
+		    <div>
+				<span></span>
+				<input type="file" name="csv" value="Upload_CSV" class=" ">
+				<span>{{ form.csv.errors }}</span>
+			</div>
+
+			<div>
+		    <input type="submit" class='btn btn-success' value="Upload" />
+		    </div>
+
+		</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

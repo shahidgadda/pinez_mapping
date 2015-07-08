@@ -1,0 +1,24 @@
+{% extends "account/base.html" %}
+
+{% block body %}
+
+		<div class="container">
+			<div class="specials">
+			<h3>Laptop Store</h3>
+				<div class="special-top">
+					{% for pic in object_list %}
+					{% if 'DELL TABLET' in pic.title %}
+					<div class="col-md-3 special-in ">
+								<a href="#" ><img src="/{{ pic.image }}" class="img-responsive zoom-img" alt=""/>
+								</a>
+								<h5><a href="#">{{ pic.description }}</a></h5>
+								<h6><a href="#">${{ pic.price }}</a></h6>
+					</div>
+					{% endif %}
+					{% endfor %}
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	<!---->
+{% endblock %}

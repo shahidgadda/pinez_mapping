@@ -1,0 +1,79 @@
+{% extends "account/base.html" %}
+
+{% load url from future %}
+{% load i18n %}
+
+
+
+{% block body %}
+    <div class="container">
+        <div class="worksmain">
+            <div class="section group">
+                {% for pic in object_list %}
+                    <div class="gallery-box">
+                        <div id="nivo-lightbox-demo">  <a href="{{ pic.image.url }}"data-lightbox-gallery="gallery1" id="nivo-lightbox-demo"> <span class="rollover1"> </span></a> 
+                        </div>     
+                        <img src="/{{ pic.image }}" height="200" width="300" alt="">
+                    </div>
+                {% endfor %}
+                
+                <div class="clearfix"></div>
+            </div>
+    <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#nivo-lightbox-demo a').nivoLightbox({ effect: 'fade' });
+        });
+    </script>
+    </div>
+        <h3>Best Attractive Products of the World..</h3>
+        <p>These are wonderful products around the globe and It would be a shopper's treat to visit them, so do visit them and book these wondeful products for your luxurious Life.</p>
+    </div>
+    <!--End-Gallery-->
+</div>
+<!-- header -->
+<!-- duis -->
+        <div class="duis">
+            <div class="down">
+                
+            </div>
+            <div class="container">
+                <h2>Our Product Galleries</h2>
+                <div class="elites">
+                     <div class="col-md-4 elite-grid">
+                         <a href="#"><img src="/static/pictures/laptop1.png" height="200" width="300"  alt=""/></a>
+                         <h3><a href="#">Buy Laptops</a></h3>
+                         <p> Shop worry-free. Buy with confidence.</p>
+                         <a href="/laptop/" class="more">[ View Store..]</a>
+                     </div>
+                     <div class="col-md-4 elite-grid">
+                         <a href="#"><img src="/static/pictures/tab1.png" height="200" width="300"  alt=""/></a>
+                         <h3><a href="#">Buy Tablets</a></h3>
+                         <p> Shop worry-free. Buy with confidence.</p>
+                         <a href="/tablet/" class="more">[ View Store..]</a>
+                     </div>
+                     <div class="col-md-4 elite-grid">
+                         <a href="#"><img src="/static/pictures/monitor1.jpg" height="200" width="300" alt=""/></a>
+                         <h3><a href="#">Buy Monitors</a></h3>
+                         <p> Shop worry-free. Buy with confidence....</p>
+                         <a href="/monitor/" class="more">[ View Store..]</a>
+                     </div>
+                     <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+<!-- duis -->       
+<!-- anean -->  
+    <div class="anean"id="contact">
+        <div class="container">
+            <label></label>
+                <div class="anean-top">
+                    <h3>Best Products in the world</h3>
+                </div>
+            <label></label>
+        </div>
+    </div>
+<!-- anean -->
+    
+<!-- content -->    
+{% endblock %}
